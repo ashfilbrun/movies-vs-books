@@ -19,6 +19,6 @@ const getMoviesById = async (req, res) => {
 }
 
 module.exports = {
-  getMovie,
+  getMovies,
   getMoviesById
 }

@@ -17,7 +17,7 @@ const main = async () => {
     {
       movie_title: 'Little Women (1994)',
       movie_img: '/images/',
-      description: '',
+      description: 'hello',
       year_released: 1994,
       actors: ['Susan Sarandon', 'Winona Ryder', 'Kirsten Dunst'],
       director: 'Gillian Armstrong',
@@ -27,14 +27,13 @@ const main = async () => {
       rotten_tomatoes: '93%',
       would_watch_again: yes,
       // favorites: 5,
-      related_book: ObjectId(),
     })
 
   const littleWomenMovie19 = new Movie(
   {
     movie_title: 'Little Women (2019)',
     movie_img: '/images/',
-    description: '',
+    description: 'hello',
     year_released: 2019,
     actors: ['Saoirse Ronan', 'Emma Watson', 'Florence Pugh', 'Timothée Chalamet'],
     director: 'Greta Gerwig',
@@ -44,22 +43,21 @@ const main = async () => {
     rotten_tomatoes: '95%',
     would_watch_again: yes,
     // favorites: 5,
-    related_book: ObjectId(),
   })
   
-  littleWomen.movies.push(littleWomenMovie19._id, littleWomenMovie94._id)
-  littleWomenMovie94.books.push(littleWomen._id)
-  littleWomenMovie19.books.push(littleWomen._id)
+  littleWomenBook.related_movies.push(littleWomenMovie19._id, littleWomenMovie94._id)
+  littleWomenMovie94.related_book.push(littleWomenBook._id)
+  littleWomenMovie19.related_book.push(littleWomenBook._id)
   await littleWomen.save()
   await littleWomenMovie94.save()
   await littleWomenMovie19.save()
 
-  const prideAndPrejudice = new Book(
-    {
-      book_title: 'Pride and Prejudice',
-      book_img: '/imagesBook/prideprej.jpg',
-      author: 'Jane Austen ',
-      year_published: 1813,
-    })
-  await prideAndPrejudice.save()
+  // const prideAndPrejudice = new Book(
+  //   {
+  //     book_title: 'Pride and Prejudice',
+  //     book_img: '/imagesBook/prideprej.jpg',
+  //     author: 'Jane Austen ',
+  //     year_published: 1813,
+  //   })
+  // await prideAndPrejudice.save()
 }
