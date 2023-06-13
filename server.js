@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const PORT = process.env.PORT || 5500
+const PORT = process.env.PORT || 3001
 const db = require('./db')
 const AppRouter = require('./routes/AppRouter')
 const User = require('./models/user')
@@ -43,6 +43,6 @@ app.get('/', (req, res) => {
   // })
   
   app.listen(PORT, () => {
-    console.log(`Expres server listening on port ${PORT}`)
+    console.log(`Express server listening on port ${PORT}`)
   })
   

@@ -8,6 +8,7 @@
 //     password: { type: String, required: true },
 //     date: { type: Date, default: Date.now},
 //     logged_in: { type: Boolean, required: true },
+//     favorites: [{ type: Schema.Types.ObjectId, ref: 'Movie', required: false }]
 //     // review: { type: String, required: true },
 //   }
 // )
