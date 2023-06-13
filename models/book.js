@@ -6,6 +6,7 @@ const bookSchema = new Schema(
     book_img: { type: Image, required: true },
     author: { type: String, required: true },
     year_published: { type: Number, required: true },
+    related_movie: { type: Schema.Types.ObjectId, required: true },
   },
   { timestamps: true }
 )
