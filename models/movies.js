@@ -1,0 +1,22 @@
+const { Schema, SchemaTypeOptions } = require('mongoose')
+
+const movieSchema = new Schema (
+  {
+    movie_title: { type: String, required: true },
+    movie_img: { type: Image, required: true },
+    description: { type: String, required: true },
+    year_released: { type: Number, required: true },
+    actors: { type: Array, required: true },
+    director: { type: String, required: true },
+    rating: { type: String, required: true },
+    run_time: { type: String, required: true },
+    imdb: { type: String, required: true },
+    rotten_tomatoes: { type: String, required: true },
+    would_watch_again: { type: Boolean, required: true },
+    // related_book: { type: Schema.Types.ObjectId(), required: true },
+    favorites: { type: Number, required: false },
+  },
+  { timestamps: true }
+)
+
+module.exports = movieSchema
