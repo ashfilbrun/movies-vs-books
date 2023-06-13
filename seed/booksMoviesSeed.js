@@ -13,15 +13,6 @@ const main = async () => {
     })
   await littleWomen.save()
 
-  const prideAndPrejudice = new Book(
-    {
-      book_title: 'Pride and Prejudice',
-      book_img: '/imagesBook/prideprej.jpg',
-      author: 'Jane Austen ',
-      year_published: 1813,
-    })
-  await prideAndPrejudice.save()
-
   const littleWomenMovie94 = new Movie(
     {
       movie_title: 'Little Women (1994)',
@@ -38,7 +29,7 @@ const main = async () => {
       // favorites: 5,
       related_book: ObjectId(),
     })
-  
+
   const littleWomenMovie19 = new Movie(
   {
     movie_title: 'Little Women (2019)',
@@ -55,6 +46,20 @@ const main = async () => {
     // favorites: 5,
     related_book: ObjectId(),
   })
-    
+  
+  littleWomen.movies.push(littleWomenMovie19._id, littleWomenMovie94._id)
+  littleWomenMovie94.books.push(littleWomen._id)
+  littleWomenMovie19.books.push(littleWomen._id)
+  await littleWomen.save()
+  await littleWomenMovie94.save()
+  await littleWomenMovie19.save()
 
+  const prideAndPrejudice = new Book(
+    {
+      book_title: 'Pride and Prejudice',
+      book_img: '/imagesBook/prideprej.jpg',
+      author: 'Jane Austen ',
+      year_published: 1813,
+    })
+  await prideAndPrejudice.save()
 }
