@@ -15,15 +15,13 @@ app.get('/', (req, res) => {
   res.send(`MOVIESSSS!`)
 })
 
+app.use('/api', AppRouter);
+
 // app.get('/article/:slug', (req, res) => {
   //   console.log(req.params)
   //   // { slug: 'ramen' }
   // })
   
-  app.get('/message/:id', (req, res) => {
-    console.log(`Getting a message with the id of ${req.params.id}`)
-    res.send({ msg: `Movies with an id of ${req.params.id} found` })
-  })
   
   // app.post('/register', (req, res) => {
   //   User.findOne({ email: req.body.email }).then((user) => {

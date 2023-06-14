@@ -20,5 +20,5 @@ const getBookById = async (req, res) => {
 
 module.exports = {
   getBook,
-  getBookById
+  getBookById,
 }
