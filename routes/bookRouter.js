@@ -5,8 +5,8 @@ const controller = require('../controllers/bookControllers.js')
 Router.get('/', controller.getBook)
 Router.get('/:id', controller.getBookById)
 
-// Router.post('/'.controller.createBook)
-// Router.put('/:id', controller.updateBook)
-// Router.delete('/id', controller.deleteBook)
+Router.post('/', controller.createBook)
+Router.put('/:id', controller.updateBookById)
+Router.delete('/id', controller.deleteBookById)
 
 module.exports = Router

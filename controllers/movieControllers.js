@@ -18,13 +18,25 @@ const getMovieById = async (req, res) => {
   }
 }
 
+const createMovie = async (req, res) => {
+  try {
+      const movie = await new Movie(req.body)
+      await movie.save()
+      return res.status(201).json({
+          movie,
+      });
+  } catch (error) {
+      return res.status(500).json({ error: error.message })
+  }
+}
+
 const updateMovieById = async (req, res) => {
   try {
       const { id } = req.params;
       const movie = await Movie.findByIdAndUpdate(id, req.body, { new: true })
-          if (err) {
-              res.status(500).send(err);
-          }
+          // if (error) {
+          //     res.status(500).send(error);
+          // }
           if (!movie) {
               res.status(500).send('Movie not found!');
           }
@@ -37,7 +49,7 @@ const updateMovieById = async (req, res) => {
 const deleteMovieById = async (req, res) => {
   try {
     const { id } = req.params
-    const movie = await Movie.findById(id)
+    const movie = await Movie.findByIdAndDelete(id)
     if(!movie) throw Error(`Movie not found`)
     res.json('Movie not found')
 } catch (e){
@@ -49,6 +61,7 @@ const deleteMovieById = async (req, res) => {
 module.exports = {
   getMovies,
   getMovieById,
+  createMovie,
   deleteMovieById,
   updateMovieById,   //Doesn't have to be named this way
 }
