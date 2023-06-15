@@ -22,6 +22,26 @@ const main = async () => {
       related_movies: [],
     })
 
+  const emmaBook = new Book(
+    {
+      book_title: 'Emma',
+      book_img: 'imagesBook/emmabook.jpg',
+      author: 'Jane Austen',
+      year_published: 1815,
+      related_movies: [],
+    }
+  )
+
+  const rebeccaBook = new Book(
+    {
+      book_title: 'Rebecca',
+      book_img: 'imagesBook/rebeccamovie.jpg',
+      author: 'Daphne du Maurnier',
+      year_published: 1938,
+      related_movies: [],
+    }
+  )
+
   const prideAndPrejudiceMovie40 = new Movie(
     {
       movie_title: 'Pride and Prejudice (1940)',
@@ -105,6 +125,54 @@ const main = async () => {
     // favorites: 5,
     related_book: [],
   })
+
+  const emmaMovie = new Movie(
+    {
+    movie_title: 'Emma',
+    movie_img:'/images/emma.png.html',
+    description: "While matchmaking for friends and neighbours, a young 19th Century Englishwoman nearly misses her own chance at love.",
+    year_released: 1996,
+    actors: ['Gwyneth Paltrow', 'James Cosmo', 'Greta Scacchi'],
+    director: 'Douglas McGrath',
+    rating:	'G',
+    run_time:	'2hr',
+    imdb: '8.8/10',
+    rotten_tomatoes: '88%',
+    would_watch_again: true,
+    related_book: [],
+  })
+
+  const rebeccaMovie1940 = new Movie(
+    {
+    movie_title: 'Rebecca',
+    movie_img: '/images/rebecca1940.html',
+    description: `A self-conscious woman juggles adjusting to her new role as an aristocrat's wife and avoiding being intimidated by his first wife's spectral presence.`,
+    year_released: 1940,
+    actors: ['Laurence Olivier', 'Joan Fontaine', 'George Sanders'],
+    director: 'Alfred Hitchcock',
+    rating:	'PG-13',
+    run_time:	'2hr 10min',
+    imdb:	'8.1/10',
+    rotten_tomatoes: '98%',
+    would_watch_again: true,
+    related_book: [],
+  })
+
+  const rebeccaMovie2020 = new Movie(
+    {
+    movie_title: 'Rebecca',
+    movie_img: '/images/rebecca2020.html',
+    description: `A young newlywed arrives at her husband's imposing family estate on a windswept English coast and finds herself battling the shadow of his first wife, Rebecca, whose legacy lives on in the house long after her death.`,
+    year_released: 2020,
+    actors:	['Lily James', 'Armie Hammer', 'Kristin Scott Thomas'],
+    director: 'Ben Wheatley',
+    rating: 'PG-13',
+    run_time: '2h 3m',
+    imdb:	'6/10',
+    rotten_tomatoes: '39%',
+    would_watch_again: true,
+    related_book: [],
+  })
   
   await Book.deleteMany()
   await Movie.deleteMany()
@@ -124,6 +192,18 @@ const main = async () => {
   littleWomenBook.related_movies.push(littleWomenMovie19._id, littleWomenMovie94._id)
   littleWomenMovie94.related_book.push(littleWomenBook._id)
   littleWomenMovie19.related_book.push(littleWomenBook._id)
+
+  await emmaBook.save()
+  await emmaMovie.save()
+  emmaBook.related_movies.push(emmaMovie._id)
+  emmaMovie.related_book.push(littleWomenBook._id)
+
+  await rebeccaBook.save()
+  await rebeccaMovie1940.save()
+  await rebeccaMovie2020.save()
+  rebeccaBook.related_movies.push(rebeccaMovie1940._id, rebeccaMovie2020._id)
+  rebeccaMovie1940.related_movies.push(rebeccaMovie2020._id)
+  rebeccaMovie2020.related_movies.push(rebeccaMovie2020._id)
 
   // const prideAndPrejudice = new Book(
   //   {
