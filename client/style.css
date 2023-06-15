@@ -9,6 +9,10 @@ body {
   min-height: 100vh;
 }
 
+.topPage {
+  display: flex;
+  flex-direction: row;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -16,13 +20,13 @@ ul {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none
 }
 
 .logo {
 	margin: 0;
   padding: 20px;
-  font-size: 60px;
+  font-size: 70px;
   text-align:left;
   color: rgb(0, 0, 0)
 }
@@ -56,7 +60,7 @@ h2 {
   color: black;
   display: block;
   margin: 0px 0px 0xp 20px;
-  padding: 10x;
+  padding: 0px 0px 0px 20px;
 }
 
 h3 {
@@ -172,3 +176,26 @@ footer {
 /* .button {
   font-family: 'Montserrat', sans-serif;
 } */
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		    width: 80%;
+		    margin: 0 auto;
+		    max-width: 1150px;
+	    }
+	}
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+    }
+}

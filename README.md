@@ -13,3 +13,5 @@
 -add log in functionality
 -add BiblioCine ratings from users
 -add comments under each movie/book review
+-add top rated movies to nav bar
+
