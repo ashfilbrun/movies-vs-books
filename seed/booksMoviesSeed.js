@@ -202,8 +202,8 @@ const main = async () => {
   await rebeccaMovie1940.save()
   await rebeccaMovie2020.save()
   rebeccaBook.related_movies.push(rebeccaMovie1940._id, rebeccaMovie2020._id)
-  rebeccaMovie1940.related_movies.push(rebeccaMovie2020._id)
-  rebeccaMovie2020.related_movies.push(rebeccaMovie2020._id)
+  rebeccaMovie1940.related_book.push(rebeccaBook._id)
+  rebeccaMovie2020.related_book.push(rebeccaBook._id)
 
   // const prideAndPrejudice = new Book(
   //   {
