@@ -15,24 +15,22 @@ ul {
   list-style: none;
 }
 
-h2, h3 {
-  color: #34495e;
-}
-
 a {
   text-decoration: none;
 }
 
 .logo {
 	margin: 0;
-  padding: 10px;
+  padding: 20px;
   font-size: 60px;
-  text-align:left
+  text-align:left;
+  color: rgb(0, 0, 0)
 }
 
 .header {
   padding-top: .5em;
 	padding-bottom: .5em;
+  padding: 20px;
 	border: 1px solid #a2a2a2;
 	background-color: #f4f4f4;
 	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
@@ -41,6 +39,7 @@ a {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px; 
+  color: #34495e;
 }
 
 h1 {
@@ -48,9 +47,8 @@ h1 {
   font-family: 'Raleway', sans-serif;
   display: block;
   font-size: 8vmin;
-  text-shadow: 4px 2px #c8aeae;
+  text-shadow: 4px 2px #8e8e3a;
   text-align: center;
-  color: rgb(0, 0, 0);
 }
 
 h2 {
@@ -59,6 +57,10 @@ h2 {
   display: block;
   margin: 0px 0px 0xp 20px;
   padding: 10x;
+}
+
+h3 {
+  font: white;
 }
 
 .nav-bar {
@@ -81,12 +83,13 @@ h2 {
 }
 
 .nav-bar a {
-	color: #34495e;
+  font-weight: 900;
+	color: #1e4a4f;
 	font-size: .99em;
 }
 
 .nav-bar a:hover{
-  color: rgb(90, 11, 2);
+  color: white;
 }
 
 main {
@@ -94,6 +97,7 @@ main {
 }
 
 img {
+  /* display: flex; */
   min-height: 10vmin;
   min-width: 10vmin;
   max-width: 40vmax;
@@ -101,22 +105,32 @@ img {
   align-content: center;
   margin-bottom: 30px;
   object-fit: cover;
-
 }
 
-/* Style the form element with a border around it */
 form {
-  border: 4px solid #f1f1f1;
+  margin-top: 50px;
+  border: 4px solid #8e8e3a;
+  padding: 20px;
+  /* font: white; */
 }
 
 /* Add some padding and a grey background color to containers */
 .container {
+  font: rgb(255, 255, 255);
   padding: 20px;
-  background-color: #f1f1f1;
+  background-color: #1e4a4f;
+  font-family: 'Montserrat', sans-serif;
 }
 
+#searchBar {
+  background-color: #e0e0db;
+}
+
+.searchContainer {
+  align-items: center;
+}
 /* Style the input elements and the submit button */
-input[type=text], input[type=submit] {
+button[type=text], button[type=submit] {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
@@ -131,22 +145,22 @@ input[type=checkbox] {
 }
 
 /* Style the submit button */
-input[type=submit] {
-  background-color: #04AA6D;
+button[type=submit] {
+  background-color: gray;
   color: white;
   border: none;
 }
 
-input[type=submit]:hover {
+button[type=submit]:hover {
   opacity: 0.8;
 }
 
 footer {
   font-family: 'Montserrat', sans-serif;
-}
-
-.container{
-  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  padding: 40px;
+  text-align: center;
+  object-fit:fill;
 }
 
 /* .button {

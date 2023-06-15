@@ -15,7 +15,7 @@
 <body>
   <header>
     <h1 class="logo">BiblioCine</h1>
-    <h2>a movie app for book</h2>
+    <h2>a movie app for book lovers</h2>
     <ul class="nav-bar">
       <li><a href='indexHomePage.html'>Home</a></li>
       <li><a href='indexExplore.html'>Explore</a></li>
@@ -25,20 +25,20 @@
   </header>
   <main>
     <div class="pageTitle" id="homePageTitle"></div>
-    <form action="action_page.php">
+    <form>
       <div class="container">
-        <h2>Subscribe to our Newsletter</h2>
+        <h3>Subscribe to our Newsletter</h3>
         <p>Enter your information below to subscribe to our monthly newsletter which highlights all things that are happening in the film world involving classic literature..</p>
       </div>
       <div class="container">
-        <input type="text" placeholder="Name" name="name" required>
-        <input type="text" placeholder="Email address" name="mail" required>
+        <input id="name" type="text" placeholder="Name" name="name" required>
+        <input id="email" type="text" placeholder="Email address" name="mail" required>
         <label>
           <input id="checkbox" type="checkbox" checked="checked" name="subscribe"> BiblioCine Monthly Newsletter
         </label>
       </div>
       <div class="container">
-        <input type="submit" value="Subscribe">
+        <button id="subBtn" type="submit">Subscribe</button>
       </div>
     </form>
   </main>

@@ -49,7 +49,7 @@ const updateSubscriberById = async (req, res) => {
 const deleteSubscriberById = async (req, res) => {
   try {
     const { id } = req.params
-    const movie = await Subscriber.findByIdAndDelete(id)
+    const subscriber = await Subscriber.findByIdAndDelete(id)
     if(!subscriber) throw Error('Subscriber not found')
     res.json('Subscriber not found')
 } catch (e){
