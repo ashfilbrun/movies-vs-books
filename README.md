@@ -1,4 +1,4 @@
-## App Title
+## BiblioCine
 
 ## Screenshot
 
@@ -9,4 +9,7 @@
 
 ## Next Steps:
 
--add capabilities for users to leave reviews
+-add create user 
+-add log in functionality
+-add BiblioCine ratings from users
+-add comments under each movie/book review
