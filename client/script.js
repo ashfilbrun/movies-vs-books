@@ -3,8 +3,8 @@ const BASE_URL = 'http://localhost:3001/api'
 const movieContainer = document.querySelector('#movieContainer')
 const searchBar = document.querySelector('#searchBar')
 const button = document.querySelector('#subBtn')
-const name = document.querySelector('#name')
-const email = document.querySelector('#email')
+const subName = document.querySelector('#name')
+const subEmail = document.querySelector('#email')
 const subscribed = document.querySelector('#checkbox')
 const searchBtn = document.querySelector('#searchBtn')
 
@@ -52,14 +52,15 @@ const search = async () => {
 const subscribe = async () => {
   const subscriberData = 
   {
-    name: getName.value,
-    email: getEmail.value,
-    subscribed: true,
+    name: subName.value,
+    email: subEmail.value,
+    subscribed: subscribed.checked,
   }
   let response = await axios.post('http://localhost:3001/api/subscriber', subscriberData)
   console.log(subscriberData)
 }
-button.addEventListener('click', async () => 
+button.addEventListener('click', async (event) => 
   {
+    event.preventDefault()
     await subscribe()
 })
