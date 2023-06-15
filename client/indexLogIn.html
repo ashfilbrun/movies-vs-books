@@ -22,17 +22,26 @@
     </ul>
   </header>
   <main>
-    <div class="searchContainer" id="searchContainer">
-      <input type="text" placeholder="Search for movies here..."></div>
-      <button class="button" id="searchBtn">Search</div>
+    <div class='loginpage' id="login">Log In</div>
     </div>
     <div class="pageTitle" id="homePageTitle"></div>
-    <div class="container" id="movieContainer">
-      <div class="movie" id="m1"></div>
-      <div class="movie" id="m2"></div>
-      <div class="movie" id="m3"></div>
-      <div class="movie" id="m4"></div>
-    </div>
+    <form action="action_page.php" method="post">
+      <div class="container">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit">Login</button>
+        <!-- <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label> -->
+      </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
   </main>
   <footer>This page was developed by Ashlan Filbrun © 2023</footer>
 </body>

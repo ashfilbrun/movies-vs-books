@@ -1,4 +1,4 @@
-const { Schema, SchemaTypeOptions } = require('mongoose')
+const { Schema } = require('mongoose')
 
 const movieSchema = new Schema (
   {
