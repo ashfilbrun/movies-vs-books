@@ -7,7 +7,7 @@ const main = async () => {
   const littleWomenBook = new Book(
     {
       book_title: 'Little Women',
-      book_img: 'imagesBook/littlewomenbook.jpg',
+      book_img: '/imagesBook/littlewomenbook.jpg',
       author: 'Louisa May Alcott',
       year_published: 1868,
       related_movies: [],
@@ -16,7 +16,7 @@ const main = async () => {
   const prideAndPrejudiceBook = new Book(
     {
       book_title: 'Pride and Prejudice',
-      book_img: 'imagesBook/prideprej.jpg',
+      book_img: '/imagesBook/prideprej.jpg',
       author: 'Jane Austen',
       year_published: 1813,
       related_movies: [],
@@ -25,7 +25,7 @@ const main = async () => {
   const emmaBook = new Book(
     {
       book_title: 'Emma',
-      book_img: 'imagesBook/emmabook.jpg',
+      book_img: '/imagesBook/emmabook.jpg',
       author: 'Jane Austen',
       year_published: 1815,
       related_movies: [],
@@ -35,7 +35,7 @@ const main = async () => {
   const rebeccaBook = new Book(
     {
       book_title: 'Rebecca',
-      book_img: 'imagesBook/rebeccamovie.jpg',
+      book_img: '/imagesBook/rebeccamovie.jpg',
       author: 'Daphne du Maurnier',
       year_published: 1938,
       related_movies: [],
@@ -62,7 +62,7 @@ const main = async () => {
   const prideAndPrejudiceMovie95 = new Movie(
     {
       movie_title: 'Pride and Prejudice (1995)',
-      movie_img: '/imagesMovie/pridenprejudice95.html',
+      movie_img: 'imagesMovie/pridenprejudice95.html',
       description: 'While the arrival of wealthy gentlemen sends her marriage-minded mother into a frenzy, willful and opinionated Elizabeth Bennet matches wits with haughty Mr. Darcy.',
       year_released: 1995,
       actors: ['Colin Firth', 'Jennifer Ehle', 'Susannah Harker'],
@@ -79,7 +79,7 @@ const main = async () => {
     const prideAndPrejudiceMovie05 = new Movie(
       {
         movie_title: 'Pride and Prejudice (2005)',
-        movie_img: '/imagesMovie/pride05.jpg',
+        movie_img: 'imagesMovie/pride05.jpg',
         description: 'Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr. Darcy reluctantly finds himself falling in love with a woman beneath his class. Can each overcome their own pride and prejudice?',
         year_released: 2005,
         actors: ['Kiera Knightley', 'Matthew Macfadyen', 'Brenda Blethyn'],
@@ -129,7 +129,7 @@ const main = async () => {
   const emmaMovie = new Movie(
     {
     movie_title: 'Emma',
-    movie_img:'/images/emma.png.html',
+    movie_img:'imagesMovie/emmamovie.jpg',
     description: "While matchmaking for friends and neighbours, a young 19th Century Englishwoman nearly misses her own chance at love.",
     year_released: 1996,
     actors: ['Gwyneth Paltrow', 'James Cosmo', 'Greta Scacchi'],
@@ -145,7 +145,7 @@ const main = async () => {
   const rebeccaMovie1940 = new Movie(
     {
     movie_title: 'Rebecca',
-    movie_img: '/images/rebecca1940.html',
+    movie_img: 'imagesMovie/rebecca1940.html',
     description: `A self-conscious woman juggles adjusting to her new role as an aristocrat's wife and avoiding being intimidated by his first wife's spectral presence.`,
     year_released: 1940,
     actors: ['Laurence Olivier', 'Joan Fontaine', 'George Sanders'],
@@ -161,7 +161,7 @@ const main = async () => {
   const rebeccaMovie2020 = new Movie(
     {
     movie_title: 'Rebecca',
-    movie_img: '/images/rebecca2020.html',
+    movie_img: 'imagesMovie/rebecca2020.html',
     description: `A young newlywed arrives at her husband's imposing family estate on a windswept English coast and finds herself battling the shadow of his first wife, Rebecca, whose legacy lives on in the house long after her death.`,
     year_released: 2020,
     actors:	['Lily James', 'Armie Hammer', 'Kristin Scott Thomas'],
