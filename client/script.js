@@ -17,10 +17,7 @@ const search = async () => {
   console.log(searchQuery.value)
       if (movies[i].movie_title.toLowerCase().includes(searchQuery.value.toLowerCase()) === true){
         console.log(searchQuery.value)
-          movieContainer.innerHTML+=`<div>${movies[i].movie_title}</div>`}
-      //  else {
-      //   return 
-      // }
+          movieContainer.innerHTML+=`<div><img src=${movies[i].movie_img} /></div>`}
   }   
 }
 const searchBtn = document.querySelector('#searchBtn')

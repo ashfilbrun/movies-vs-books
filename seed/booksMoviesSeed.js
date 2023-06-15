@@ -35,7 +35,7 @@ const main = async () => {
       imdb: '7.4/10',
       rotten_tomatoes: '100%',
       would_watch_again: true,
-      favorites: 5,
+      // favorites: 5,
       related_book: [],
     })
 
@@ -52,14 +52,14 @@ const main = async () => {
       imdb: '8.8/10',
       rotten_tomatoes: '88%',
       would_watch_again: true,
-      favorites: 5,
+      // favorites: 5,
       related_book: [],
     })
 
     const prideAndPrejudiceMovie05 = new Movie(
       {
         movie_title: 'Pride and Prejudice (2005)',
-        movie_img: '/imagesMovie/pridenprejudice05.html',
+        movie_img: '/imagesMovie/pride05.jpg',
         description: 'Sparks fly when spirited Elizabeth Bennet meets single, rich, and proud Mr. Darcy. But Mr. Darcy reluctantly finds himself falling in love with a woman beneath his class. Can each overcome their own pride and prejudice?',
         year_released: 2005,
         actors: ['Kiera Knightley', 'Matthew Macfadyen', 'Brenda Blethyn'],
@@ -69,14 +69,14 @@ const main = async () => {
         imdb: '7.8/10',
         rotten_tomatoes: '87%',
         would_watch_again: true,
-        favorites: 5,
+        // favorites: 5,
         related_book: [],
       })
   const littleWomenMovie94 = new Movie(
     {
       movie_title: 'Little Women (1994)',
       movie_img: 'imagesMovie/little94.jpg',
-      description: 'hello',
+      description: 'The March sisters live and grow in post-Civil War America.',
       year_released: 1994,
       actors: ['Susan Sarandon', 'Winona Ryder', 'Kirsten Dunst'],
       director: 'Gillian Armstrong',
@@ -85,7 +85,7 @@ const main = async () => {
       imdb: '7.3/10',
       rotten_tomatoes: '93%',
       would_watch_again: true,
-      favorites: 5,
+      // favorites: 5,
       related_book: [],
     })
 
@@ -93,7 +93,7 @@ const main = async () => {
   {
     movie_title: 'Little Women (2019)',
     movie_img: 'imagesMovie/littlewomenmovie1.jpg',
-    description: 'hello',
+    description: 'Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women, each determined to live life on her own terms.',
     year_released: 2019,
     actors: ['Saoirse Ronan', 'Emma Watson', 'Florence Pugh', 'Timothée Chalamet'],
     director: 'Greta Gerwig',
@@ -102,21 +102,28 @@ const main = async () => {
     imdb: '7.8/10',
     rotten_tomatoes: '95%',
     would_watch_again: true,
-    favorites: 5,
+    // favorites: 5,
     related_book: [],
   })
   
   await Book.deleteMany()
   await Movie.deleteMany()
-  await littleWomenBook.save()
+
   await prideAndPrejudiceBook.save()
+  await prideAndPrejudiceMovie05.save()
+  await prideAndPrejudiceMovie40.save()
+  await prideAndPrejudiceMovie95.save()
+  prideAndPrejudiceBook.related_movies.push(prideAndPrejudiceMovie05._id, prideAndPrejudiceMovie40._id, prideAndPrejudiceMovie95._id)
+  prideAndPrejudiceMovie05.related_book.push(prideAndPrejudiceBook._id)
+  prideAndPrejudiceMovie40.related_book.push(prideAndPrejudiceBook._id)
+  prideAndPrejudiceMovie95.related_book.push(prideAndPrejudiceBook._id)
+
+  await littleWomenBook.save()
   await littleWomenMovie94.save()
   await littleWomenMovie19.save()
-  await prideAndPrejudiceMovie40.save()
   littleWomenBook.related_movies.push(littleWomenMovie19._id, littleWomenMovie94._id)
   littleWomenMovie94.related_book.push(littleWomenBook._id)
   littleWomenMovie19.related_book.push(littleWomenBook._id)
-  prideAndPrejudiceBook.related_movies.push(prideAndPrejudiceMovie40._id, prideAndPrejudiceMovie95._id, prideAndPrejudiceMovie05._id)
 
   // const prideAndPrejudice = new Book(
   //   {
