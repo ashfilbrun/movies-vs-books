@@ -111,7 +111,13 @@ form {
   margin-top: 50px;
   border: 4px solid #8e8e3a;
   padding: 20px;
+  text-align: center;
   /* font: white; */
+}
+
+form.container {
+  display: flex;
+  justify-content: 
 }
 
 /* Add some padding and a grey background color to containers */
