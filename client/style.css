@@ -176,7 +176,7 @@ form {
 }
 
 #searchBar {
-  background-color: rgb(255, 255, 255);
+  background-color: #e0e0db;
   color: black;
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
@@ -196,6 +196,11 @@ form {
   border: none;
   font-family: 'Montserrat', sans-serif;
   border-radius: 3px;
+}
+/* 
+.searchContainer #searchBtn:hover{
+  color: black;
+  background-color: #8e8e3a; */
 }
 /* #subscribeForm {
   box-shadow: 0px 0px 0px 0px #000000;
