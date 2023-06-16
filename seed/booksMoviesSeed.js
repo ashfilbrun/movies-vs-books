@@ -206,7 +206,7 @@ const mockingbirdBook = await Book.findOne({book_title: 'To Kill A Mockingbird'}
   },
   {
     movie_title: 'Jane Eyre',
-    movie_img: '/imagesBook/janeeyremovie.jpg',
+    movie_img: '/imagesMovie/janeeyremovie.jpg',
     description: `A mousy governess who softens the heart of her employer soon discovers that he's hiding a terrible secret.`,
     year_released: 2011,
     actors:	['Mia Wasikowska', 'Michael Fassbender', 'Jamie Bell'],
