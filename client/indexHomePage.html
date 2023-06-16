@@ -11,34 +11,51 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=EB+Garamond:ital@1&family=Lilita+One&family=Montserrat:wght@200;300&family=Nanum+Gothic&family=Raleway:wght@500&display=swap" rel="stylesheet">
-  <title>Better Than Books</title>
+  <link rel="icon" type="image/png" href="/imagesBook/icons8-books-49.png">
+  <title>BiblioCine</title>
 </head>
 <body>
   <header>
-    <div class=topPage">
+    <header>
       <h1 class="logo">BiblioCine</h1>
-      <h2 class="bio">a movie app for book lovers</h2>
-    </div>
-    <ul class="nav-bar">
-      <li><a href='indexHomePage.html'>Home</a></li>
-      <li><a href='indexExplore.html'>Explore</a></li>
-      <li><a href='indexBest.html'>Top Rated Movies</a></li>
-      <li><a href='indexSignUp.html'>Sign Up</a></li>
-    </ul>
+      <h2>a movie app for book lovers</h2>
+      <ul class="nav-bar">
+        <li><a href='indexHomePage.html'>Home</a></li>
+        <li><a href='indexExplore.html'>Explore</a></li>
+        <li><a href='indexBest.html'>Top Rated Movies</a></li>
+        <li><a href='indexSignUp.html'>Sign Up</a></li>
+      </ul>
+    </header>
   </header>
   <main>
-    <form class="searchContainer" id="searchContainer">
-      <input type="text" placeholder="Search for movies here..." id="searchBar"></div>
-      <button class="button" id="searchBtn">Search</button>
-    </form
+    <form class="container" id="searchContainer">
+      <input type="text" placeholder="Search for movies here..." id="searchBar">
+      <button class="searchBtn" id="searchBtn">Search</button>
+    </form>
     <div class="pageTitle" id="homePageTitle"></div>
     <div class="container" id="movieContainer">
-      <img class="movie" id="m1"></div>
-      <img class="movie" id="m2"></div>
-      <img class="movie" id="m3"></div>
-      <img class="movie" id="m4"></div>
+      <!-- <img class="movie" id="m1">
+      <img class="movie" id="m2">
+      <img class="movie" id="m3"> -->
+      <!-- <img class="movie" id="m4"> -->
+    </div>
+        <!-- Trigger the Modal -->
+    <img id="myImg" src="" style="width:100%;max-width:300px">
+      <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- The Close Button -->
+      <span class="close">&times;</span>
+      <!-- Modal Content (The Image) -->
+      <img class="modal-content" id="modalImg">
+      <!-- Modal Caption (Image Text) -->
+      <div id="modalBody"> 
+        <img class="modal-content" id="modalImg">
+        <div id="modalName"></div>
+        <div id="modalDescription"></div>
+      </div>
     </div>
   </main>
   <footer>This page was developed by&nbsp<a href='https://github.com/ashfilbrun'>Ashlan Filbrun</a>&nbsp © 2023</footer>
+  <button class="hidden" id="subBtn" type="submit">Subscribe</button>
 </body>
 </html>

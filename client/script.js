@@ -2,44 +2,73 @@
 const BASE_URL = 'http://localhost:3001/api'
 const movieContainer = document.querySelector('#movieContainer')
 const searchBar = document.querySelector('#searchBar')
-const button = document.querySelector('#subBtn')
-const subName = document.querySelector('#name')
-const subEmail = document.querySelector('#email')
+const subButton = document.querySelector('#subBtn')
+const subName = document.querySelector('#subName')
+const subEmail = document.querySelector('#subEmail')
 const subscribed = document.querySelector('#checkbox')
-const searchBtn = document.querySelector('#searchBtn')
-
+const searchButton = document.getElementById('searchBtn')
+const modal = document.getElementById('myModal') 
+// console.log(searchButton)
 // When using the BASE_URL
 
 //search bar functionality
 const search = async () => {
   movieContainer.innerHTML=``
   let response = await axios.get(`${BASE_URL}/movies`)
-  // console.log(response)
+  console.log(response)
   const movies = response.data
   // console.log(movies)
   for (let i = 0; i < movies.length; i++){
   // console.log(movies[i].movie_title.toLowerCase().includes(searchBar.value.toLowerCase()) === true)
-  console.log(movies[i])
-  console.log(movies.length)
-  console.log(searchBar.value)
+  // console.log(movies[i])
+  // console.log(movies.length)
+  // console.log(searchBar.value)
       if (movies[i].movie_title.toLowerCase().includes(searchBar.value.toLowerCase()) === true){
         console.log(searchBar.value)
-          movieContainer.innerHTML+=`<div><img src=${movies[i].movie_img} /></div>`}
+          movieContainer.innerHTML+=`<div id="${'movies'+i}"><img src=${movies[i].movie_img} /></div>`
+        const currentMovie = document.getElementById('movies'+i)
+        console.log(currentMovie)
+        currentMovie.addEventListener('click', () => {
+          openModal(movies[i])
+        })
+      }
   }   
 }
 
 //search button functionality
 // console.log(searchBtn)
 
-// document.querySelector('#searchBtn').addEventListener('click', () => {
-//   search()
-// })
+searchButton.addEventListener('click', (event) => {
+  event.preventDefault()
+  search()
+})
 
 // make search result images click to redirect to page with all their data
+const img = document.getElementById('myImg');
+const modalMovieImage = document.getElementById('modalImg')
+const modalMovieTitle = document.getElementById('modalName')
+const modalMovieDescription = document.getElementById('modalDescription')
 
+const openModal = (movie) => {
+  console.log('openModal')
+  modal.style.display = 'block';
+  modalMovieImage.src = movie.movie_img
+  modalMovieTitle.innerText = movie.movie_title
+  modalMovieDescription.innerText = movie.description
+}
 
+// const captionText = document.getElementById
+// img.onclick = function(){
+//   modal.style.display = 'block';
+//   modalImg.src = this.src;
+//   captionText.innerHTML = this.alt;
+// }
 
-// subscribe button functionality 
+const span = document.getElementsByClassName('close')[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 
 
@@ -52,14 +81,14 @@ const search = async () => {
 const subscribe = async () => {
   const subscriberData = 
   {
-    name: subName.value,
+    subName: subName.value,
     email: subEmail.value,
     subscribed: subscribed.checked,
   }
   let response = await axios.post('http://localhost:3001/api/subscriber', subscriberData)
   console.log(subscriberData)
 }
-button.addEventListener('click', async (event) => 
+subButton.addEventListener('click', async (event) => 
   {
     event.preventDefault()
     await subscribe()
