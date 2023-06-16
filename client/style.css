@@ -35,8 +35,8 @@ a {
 
 header {
   padding-top: .5em;
-	border-bottom: 5px solid #8e8e3aad;
-  padding-bottom: .5em;
+	border-bottom: 5px solid #8e8e3a;
+  /* padding-bottom: .5em; */
 	-webkit-box-shadow: 0px 0px 14px 0px #8e8e3a;
 	-moz-box-shadow: 0px 0px 14px 0px #8e8e3a;
 	box-shadow: 0px 0px 14px 0px #8e8e3a;
@@ -68,7 +68,7 @@ h2 {
   flex-direction: row;
   justify-content: space-around;
   font-size: 20px;
-  background-color: rgba(128, 128, 128, 0.258) ;
+  background-color: rgba(128, 128, 128, 0.576) ;
   padding: 5px;
   list-style: none;
 	margin: 0px 0px 0px 0px;
@@ -93,7 +93,11 @@ h2 {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Montserrat', sans-serif;
+  /* align-content: center; */
 }
 
 img {
@@ -123,47 +127,58 @@ form {
 /* Add some padding and a grey background color to containers */
 .container {
   /* font: rgb(255, 255, 255); */
-  padding: 20px;
+  /* padding: 20px; */
   background-color: #1e4a4f;
   font-family: 'Montserrat', sans-serif;
   color: white;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #searchContainer {
   margin: 20px 20px 20px 20px;
+  padding: 40px 180px 40px 180px;
+  justify-content: space-around;
   align-items: center;
   font-size: 15px;
 }
 
-#movieContainer {
-  background-color: #1e4a4f;
+#movieContainer.container {
+  background-color: #e0e0db;
   align-items: center;
   display: flex;
+  justify-content: space-around;
   flex-direction: row;
   width: fit-content;
   /* border: 4px solid #8e8e3a; */
   padding: 20px;
-  margin: 20px 0px 0px 650px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 20px 0px 20px 0px;
   word-wrap: break-word;
-  overflow: scroll;
+  /* overflow: scroll; */
   text-align: center;
 }
 
 #searchBar {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: black;
   font-family: 'Montserrat', sans-serif;
   height: 40px;
   width: 200px;
   border-radius: 2px;
   border: none;
-
+  padding: 5px;
+  margin: 10px;
 }
 
 .searchBtn {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
+  background-color: #8e8e3a;
+  color: black;
 }
 
 
@@ -286,7 +301,6 @@ footer {
   width: 80%;
   max-width: 700px;
   text-align: center;
-  color: #ccc;
   /* padding: 10px 0; */
   /* height: 150px; */
 }
