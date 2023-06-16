@@ -27,11 +27,19 @@ I used axios to pull data from my back end to show on my front end in the form o
 
 ## Next Steps:
 
--add movie and book comparisons
--add book photos to "specific movie" modals
--add create user 
--add log in functionality
--add BiblioCine ratings from users
--add comments under each movie/book review
--add top rated movies to nav bar
+- deploy website 
+
+- add movie and book comparisons
+
+- add book photos to "specific movie" modals
+
+- add create user 
+
+- add log in functionality
+
+- add BiblioCine ratings from users
+
+- add comments under each movie/book review
+
+- add top rated movies to nav bar
 
