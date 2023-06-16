@@ -4,6 +4,12 @@ Check it out at this link:
 
 ## Screenshot
 
+How my site looks now:
+![My Image](imagesBook/bibliocine.jpg)
+
+How I planned the design:
+![My Image](imagesBook/p2figma.jpg)
+
 ## Technologies Used
 
  -Figma https://www.figma.com/file/98vPYmnJMViAcEXGPytRSK/Untitled?type=design&node-id=32%3A47&t=sBB7iHoqoNWzCb0p-1
