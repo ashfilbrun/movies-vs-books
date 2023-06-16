@@ -21,6 +21,10 @@ How I planned the design:
 
 I made a program that compares classic movies to the movies that are based off of them and rating them based off of accuracy to the book. 
 
+I used CRUD to create my mailing list sign up form and save the information to my back end.
+
+I used axios to pull data from my back end to show on my front end in the form of movies and their information.
+
 ## Next Steps:
 
 -add movie and book comparisons
