@@ -48,6 +48,15 @@ const img = document.getElementById('myImg');
 const modalMovieImage = document.getElementById('modalImg')
 const modalMovieTitle = document.getElementById('modalName')
 const modalMovieDescription = document.getElementById('modalDescription')
+const modalMovieYear = document.getElementById('modalYear')
+const modalMovieActors = document.getElementById('modalActors')
+const modalMovieDirector = document.getElementById('modalDirector')
+const modalMovieRating = document.getElementById('modalRating')
+const modalMovieRuntime = document.getElementById('modalRunTime')
+const modalMovieImdb = document.getElementById('modalImdb')
+const modalMovieRottenTomatoes = document.getElementById('modalRotten')
+const modalWatchAgain = document.getElementById('modalWatchAgain')
+const modalRelatedBook = document.getElementById('modalBook')
 
 const openModal = (movie) => {
   console.log('openModal')
@@ -55,6 +64,15 @@ const openModal = (movie) => {
   modalMovieImage.src = movie.movie_img
   modalMovieTitle.innerText = movie.movie_title
   modalMovieDescription.innerText = movie.description
+  modalMovieYear.innerText = movie.year_released
+  modalMovieActors.innerText = movie.actors
+  modalMovieDirector.innerText = movie.director
+  modalMovieRating.innerText = movie.rating
+  modalMovieRuntime.innerText = movie.run_time
+  modalMovieImdb.innerText = movie.imdb
+  modalMovieRottenTomatoes.innerText = movie.rotten_tomatoes
+  modalWatchAgain.innerText = movie.would_watch_again
+  // modalRelatedBook.innerText = movie.related_book[]
 }
 
 // const captionText = document.getElementById

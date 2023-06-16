@@ -1,11 +1,11 @@
 const db = require('../db')
-const { Book, Movie } = require('../models')
+const { Movie, Book } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const main = async () => {
-  await Book.deleteMany()
-  await Movie.deleteMany()
+  // await Book.deleteMany()
+  // await Movie.deleteMany()
 
   const books = [
   {
@@ -77,7 +77,7 @@ const janeEyreBook = await Book.findOne({book_title:'Jane Eyre'})
 const wutheringBook = await Book.findOne({book_title: 'Wuthering Heights'})
 const mockingbirdBook = await Book.findOne({book_title: 'To Kill A Mockingbird'})
 
-const movies = [
+  const movies = [
   {
     movie_title: 'Murder on the Orient Express',
     movie_img:'/imagesMovie/orientExpress.jpg',
@@ -90,7 +90,7 @@ const movies = [
     imdb: '7.2/10',
     rotten_tomatoes: '90%',		
     would_watch_again: true,
-    related_book: [murderBook._id]
+    // related_book: murderBook._id,
   },
   {
     movie_title: 'Rebecca',
@@ -104,7 +104,7 @@ const movies = [
     imdb:	'6/10',
     rotten_tomatoes: '39%',
     would_watch_again: true,
-    related_book: [rebeccaBook._id],
+    // related_book: rebeccaBook._id,
   },
   {
     movie_title: 'Rebecca (1940)',
@@ -118,7 +118,7 @@ const movies = [
     imdb:	'8.1/10',
     rotten_tomatoes: '98%',
     would_watch_again: true,
-    related_book: [rebeccaBook._id],
+    // related_book: rebeccaBook._id,
   },
   {
     movie_title: 'Pride and Prejudice (1940)',
@@ -132,7 +132,7 @@ const movies = [
     imdb: '7.4/10',
     rotten_tomatoes: '100%',
     would_watch_again: true,
-    related_book: [prideAndPrejudiceBook._id],
+    // related_book: prideAndPrejudiceBook._id,
   },
   {
     movie_title: 'Pride and Prejudice (1995)',
@@ -146,7 +146,7 @@ const movies = [
     imdb: '8.8/10',
     rotten_tomatoes: '88%',
     would_watch_again: true,
-    related_book: [prideAndPrejudiceBook._id],
+    // related_book: prideAndPrejudiceBook._id,
   },
   {
     movie_title: 'Pride and Prejudice (2005)',
@@ -160,7 +160,7 @@ const movies = [
     imdb: '7.8/10',
     rotten_tomatoes: '87%',
     would_watch_again: true,
-    related_book: [prideAndPrejudiceBook._id],
+    // related_book: prideAndPrejudiceBook._id,
   },
   {
     movie_title: 'Little Women (1994)',
@@ -174,7 +174,7 @@ const movies = [
     imdb: '7.3/10',
     rotten_tomatoes: '93%',
     would_watch_again: true,
-    related_book: [littleWomenBook._id],
+    // related_book: littleWomenBook._id,
   },
   {
     movie_title: 'Little Women (2019)',
@@ -188,7 +188,7 @@ const movies = [
     imdb: '7.8/10',
     rotten_tomatoes: '95%',
     would_watch_again: true,
-    related_book: [littleWomenBook._id],
+    // related_book: littleWomenBook._id,
   },
   {
     movie_title: 'Emma',
@@ -202,7 +202,7 @@ const movies = [
     imdb: '8.8/10',
     rotten_tomatoes: '88%',
     would_watch_again: true,
-    related_book: [emmaBook._id],
+    // related_book: emmaBook._id,
   },
   {
     movie_title: 'Jane Eyre',
@@ -216,7 +216,7 @@ const movies = [
     imdb: '7.3/10',
     rotten_tomatoes: '85%',
     would_watch_again: true,
-    related_book: [janeEyreBook._id],
+    // related_book: janeEyreBook._id,
   },
   {
     movie_title: 'Wuthering Heights',
@@ -230,7 +230,7 @@ const movies = [
     imdb: '7.5/10',
     rotten_tomatoes: '96%',
     would_watch_again: true,
-    related_book: [wutheringBook._id],
+    // related_book: wutheringBook._id,
   },
   {
     movie_title: `To Kill A Mockingbird`,
@@ -244,16 +244,17 @@ const movies = [
     imdb: `8.3/10`,
     rotten_tomatoes: `93%`,
     would_watch_again: true,
-    related_book: [mockingbirdBook._id],
+    // related_book: mockingbirdBook._id,
   }
-]  
+]
+
+  await Book.deleteMany()
+  await Movie.deleteMany()
+
+  // const rebeccaMovie20 = await Movie.findOne({movie_title: 'Rebecca (2020)'})
 
 
-  // await Book.deleteMany()
-  // await Movie.deleteMany()
-
-
-  await Movie.insertMany(movies)
+await Movie.insertMany(movies)
   // const prideandPrejudiceMovie05 = await Movie.findOne({'Pride and Prejudice (2005)'})
   // const prideAndPrejudiceMovie95 = await Movie.findOne({'Pride and Prejudice (1995)'})
   // const prideAndPrejudiceMovie40 = await Movie.findOne({'Pride and Prejudice 1940'})

@@ -13,7 +13,7 @@ const movieSchema = new Schema (
     imdb: { type: String, required: true },
     rotten_tomatoes: { type: String, required: true },
     would_watch_again: { type: Boolean, required: true },
-    favorites: { type: Number, required: false },
+    // favorites: { type: Number, required: false },
     related_book: [{ type: Schema.Types.ObjectId, required: true }],
   },
   { timestamps: true }
