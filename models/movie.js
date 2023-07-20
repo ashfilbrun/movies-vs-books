@@ -14,7 +14,10 @@ const movieSchema = new Schema (
     rotten_tomatoes: { type: String, required: true },
     would_watch_again: { type: Boolean, required: true },
     // favorites: { type: Number, required: false },
-    related_book: [{ type: Schema.Types.ObjectId, required: true }],
+    related_book: { type: Schema.Types.ObjectId, 
+      required: true,
+      ref: "Book",
+    },
   },
   { timestamps: true }
 )

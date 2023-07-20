@@ -2,7 +2,7 @@ const { Movie } = require('../models')
 // const movieSchema = require('../models/movie.js')
 
 const getMovies = async (req, res) => {
-  const movie = await Movie.find({}).populate('related_book')
+  const movie = await Movie.find({}).populate("related_book")
   res.json(movie)
 }
 

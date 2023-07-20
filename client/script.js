@@ -72,7 +72,7 @@ const openModal = (movie) => {
   modalMovieImdb.innerText = movie.imdb
   modalMovieRottenTomatoes.innerText = movie.rotten_tomatoes
   modalWatchAgain.innerText = movie.would_watch_again
-  // modalRelatedBook.innerText = movie.related_book[]
+  modalRelatedBook.innerText = movie.related_book
 }
 
 // const captionText = document.getElementById
